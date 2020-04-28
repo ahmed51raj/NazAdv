@@ -35,7 +35,7 @@ class Category(models.Model):
 
 class Projects(models.Model):
   title = models.CharField(max_length=50)
-  category = models.ForeignKey(Category, on_delete='CASCADE')
+  category = models.ForeignKey(Category, on_delete=models.CASCADE)
   image = models.ImageField(upload_to="images/")
 
   def __str__(self):
@@ -44,7 +44,7 @@ class Projects(models.Model):
 
 class ProjectsImage(models.Model):
     projects = models.ForeignKey(Projects, default=None, on_delete=models.CASCADE)
-    images = models.FileField(upload_to='images/')
+    images = models.ImageField(upload_to='images/')
 
     def __str__(self):
         return self.projects.title

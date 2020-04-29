@@ -54,6 +54,10 @@
   <!-- images goes here -->
   <div class="container">
     <div class="row">
+     
+      <h3>{{project.project_detail_heading}}</h3>
+      <p>{{project.project_detail_subheading}}<p/>
+    
       {% for photo in photos %}
       <div class="col l12">
         <img src="{{photo.images.url}}" class="responsive-img" data-aos="fade-up" alt="">

@@ -37,4 +37,4 @@ def project_detail(request,category,id):
     'photos':photos,
     'projects':projects
   }
-  return render(request, 'home/project_detail.html', context)
+  return render(request, 'portfolio/project_detail.html', context)

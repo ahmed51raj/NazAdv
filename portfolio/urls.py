@@ -9,6 +9,6 @@ import portfolio.views
 
 urlpatterns = [
     path('',portfolio.views.portfolio,name='portfolio'),
-    path('portfolio/<category>/<int:id>/',portfolio.views.project_detail, name='project_detail'),
+    path('project/<category>/<int:id>/',portfolio.views.project_detail, name='project_detail'),
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
